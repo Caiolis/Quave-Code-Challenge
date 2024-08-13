@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { loadInitialData } from '../infra/initial-data';
+import '../communities/communities';
 
 Meteor.startup(async () => {
   // DON'T CHANGE THE NEXT LINE
