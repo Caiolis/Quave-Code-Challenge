@@ -34,13 +34,14 @@ export function PeopleList({ selected, communityId }) {
       </div>
       <hr className="mt-3" />
       {selected ? (
-        data.map((people) => (
+        data.map((people, index) => (
           <PeopleCard
             key={people._id}
             firstName={people.firstName}
             lastName={people.lastName}
             title={people.title}
             companyName={people.companyName}
+            index={index}
           />
         ))
       ) : (
