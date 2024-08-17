@@ -37,11 +37,13 @@ export function PeopleList({ selected, communityId }) {
         data.map((people, index) => (
           <PeopleCard
             key={people._id}
+            personId={people._id}
             firstName={people.firstName}
             lastName={people.lastName}
             title={people.title}
             companyName={people.companyName}
             index={index}
+            checkInDate={people.checkInDate}
           />
         ))
       ) : (

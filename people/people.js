@@ -10,4 +10,14 @@ Meteor.methods({
   'people.getByCommunity'(communityId) {
     return People.find({ communityId }, { limit: 20 }).fetchAsync();
   },
+  'people.checkIn'(personId, currentDate) {
+    return People.updateAsync(
+      { _id: personId },
+      {
+        $set: {
+          checkInDate: currentDate,
+        },
+      }
+    );
+  },
 });
